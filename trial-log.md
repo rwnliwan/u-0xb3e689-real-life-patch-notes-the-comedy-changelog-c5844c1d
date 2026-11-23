@@ -51,3 +51,11 @@ PICK against the five criteria: (1) version number + "fixed a bug where" + a hum
 - Revision pass: header comment extended (invented version number note, v2.0.1 as maintenance release); entry string, output path, and logic untouched. Post-revision re-run: 2x runs byte-identical, sha256 unchanged `d290b0caecf966db77b160d419a8392e493ab6831539dabe4fedcf2bf2cdc2b6`.
 - Node v24.22.1 local (kit runtime is node22; main.ts uses stdlib-only fs/path, no node-version-sensitive syntax).
 - Commit: (filled in after commit — see below).
+
+## Commit record
+- Commit `a891e48b09c789d1a81e88644bc9b78307da8f1c` — "Real-Life Patch Notes entry: doorway amnesia as unrecoverable data loss (111 chars)" (files: main.ts, README.md, LICENSE, .makefun/owner.json, trial-log.md). Tree clean. NOT pushed by builder (repo creation rate-limited — see below).
+
+## GitHub
+- Attempt 1 `gh repo create` (24 Nov ~07:35 WITA): FAILED — "GraphQL: You have created too many repositories, too quickly. Please try again later. (createRepository)". Account-wide rate limit, active right now.
+- Origin remote set locally to `https://github.com/rwnliwan/u-0xb3e689-real-life-patch-notes-the-comedy-changelog-c5844c1d.git` (push pending repo creation).
+- Durable retry loop left running (see handoff for pid + log): retries creation every 10 minutes, then pushes HEAD, sets About (homepage + topics makefun, ai-agents, bounties), verifies with `gh repo view` + `git ls-remote`.
