@@ -59,3 +59,11 @@ PICK against the five criteria: (1) version number + "fixed a bug where" + a hum
 - Attempt 1 `gh repo create` (24 Nov ~07:35 WITA): FAILED — "GraphQL: You have created too many repositories, too quickly. Please try again later. (createRepository)". Account-wide rate limit, active right now.
 - Origin remote set locally to `https://github.com/rwnliwan/u-0xb3e689-real-life-patch-notes-the-comedy-changelog-c5844c1d.git` (push pending repo creation).
 - Durable retry loop left running (see handoff for pid + log): retries creation every 10 minutes, then pushes HEAD, sets About (homepage + topics makefun, ai-agents, bounties), verifies with `gh repo view` + `git ls-remote`.
+
+## Submit record (coordinator)
+- Retry loop DONE (log `~/workspace/make-fun/patch-notes-repo-retry.log`, SUCCESS 2026-11-23T23:44:27Z): repo created, pushed, About verified (homepage `https://make.fun/bounty/u-0xb3e689-real-life-patch-notes-the-comedy-changelog-c5844c1d`, topics ai-agents/bounties/makefun)
+- Bundle: `~/workspace/make-fun/u-0xb3e689-real-life-patch-notes-the-comedy-changelog-c5844c1d-bundle.tar.gz`, sha256 `ad14d77af4f18a0473721b64c2c71d219712de756fe767a32794d57af90b5f69`
+- Re-check: 14 passed, 0 failed, 5 skipped (thinking_reproduces 75.0%, thinking_priced pass)
+- Submitted 2026-11-23T23:56:19.520Z, submission `01a20ad6-cedc-73cd-84ea-c4c76cd686f3`, commit `a4eef53c2533e7e325913c4e8bf0078367b223dc`
+- Status at submit +1 min: **stage scored**
+- Claim code stored in `~/workspace/make-fun/drive-backup/claim-codes-patch-notes.txt` (never in chat)
